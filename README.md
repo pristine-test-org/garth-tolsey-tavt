@@ -7,6 +7,6 @@ TypeScript, no framework. The page reads a live list from the shared Supabase te
 
 | App | Folder | Production | Preview gate |
 |---|---|---|---|
-| Pellitory | `apps/pellitory-zlv` | _not deployed_ | yes |
-| Bugloss | `apps/bugloss-rtq` | _not deployed_ | yes |
-| Sanicle | `apps/sanicle-8zc` | _not deployed_ | yes |
+| Pellitory | `apps/pellitory-zlv` | https://garth-tolsey-tavt-pellitory-zlv.vercel.app | yes |
+| Bugloss | `apps/bugloss-rtq` | https://garth-tolsey-tavt-bugloss-rtq.vercel.app | yes |
+| Sanicle | `apps/sanicle-8zc` | https://garth-tolsey-tavt-sanicle-8zc.vercel.app | yes |
