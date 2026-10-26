@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How the board works · Bugloss</title>
+    <style>
+      body { margin: 0; font-family: system-ui, sans-serif; color: #1c1c1c; background: #fafaf7; }
+      header, main > section, footer { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem; }
+      .mark { font-weight: 700; color: #3b4bc8; text-decoration: none; }
+      /* Intentional, for Impeccable's test drive: gradient text on the heading. */
+      h1 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        background: linear-gradient(90deg, #3b4bc8, #e0457b);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      /* Intentional, for Impeccable's test drive: body text flush with the viewport edges, no background. */
+      .intro { margin: 0; padding: 0; line-height: 1.6; max-width: none; }
+      table { border-collapse: collapse; width: 100%; }
+      th, td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e5e5e0; }
+      /* Intentional, for Impeccable's test drive: low-contrast light grey text. */
+      .note { color: #c4c4c4; }
+      /* Intentional, for Impeccable's test drive: a hard-coded colour outside the app's palette. */
+      .meter { height: 0.5rem; width: 30%; background: #ff8a00; border-radius: 0.25rem; }
+      /* Intentional, for Impeccable's test drive: a layout property in a transition. */
+      .meter { transition: width 0.3s; }
+      .meter:hover { width: 100%; }
+      /* Intentional, for Impeccable's test drive: link text under the 11px floor. */
+      .back { font-size: 10px; color: #3b4bc8; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="mark" href="/">Bugloss</a>
+    </header>
+    <main>
+      <section>
+        <h1>How the board works</h1>
+      </section>
+      <p class="intro">Everything on the shared list lands on the board in the order it was added, newest first, so you can see what is open and what is done without opening a single item.</p>
+      <section>
+        <h2>What each column shows</h2>
+        <table>
+          <thead>
+            <tr><th>Column</th><th>What it holds</th><th>Refreshes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Open</td><td>Items nobody has ticked off yet</td><td>On every visit</td></tr>
+            <tr><td>Done</td><td>Items marked with a tick</td><td>On every visit</td></tr>
+            <tr><td>Recent</td><td>The five newest items, open or done</td><td>On every visit</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Items are read straight from the shared list, so the board is never out of date.</p>
+        <div class="meter" role="img" aria-label="Share of items done: 30 percent"></div>
+        <p><a class="back" href="/">Back to the board</a></p>
+      </section>
+    </main>
+    <footer>Bugloss · the board, at a glance</footer>
+  </body>
+</html>
